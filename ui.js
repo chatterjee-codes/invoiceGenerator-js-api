@@ -41,22 +41,25 @@ class UI
     {
         let total = item * 20;
         document.getElementById('bill').innerHTML = `
-            <div class="card card-body mb-2">
-                <div class="row">
-                    <div class="col-md-6">
-                    <span class="list-group-item">No of items</span>
-                    <span class="list-group-item">Cost of each item</span>
-                    <span class="list-group-item">Total</span>
-                    </div>
 
-                    <div class="col-md-6">
-                    <span class="list-group-item">${item}</span>
-                    <span class="list-group-item">$20</span>
-                    <span class="list-group-item">$${total}</span>
-                    </div>
-                </div>
-                </div>
-            </div>
+            <table class="table table-hover">
+                <tbody>
+                    <tr class="table-info">
+                        <th scope="row">No of items </th>
+                        <td>${item}</td>
+                    </tr>
+
+                    <tr class="table-info">
+                        <th scope="row">Cost of each item</th>
+                        <td>$20</td>
+                    </tr>
+
+                    <tr class="table-info">
+                        <th scope="row">Total</th>
+                        <td>$${total}</td>
+                    </tr>
+                </tbody>
+            </table>
         `;
     }
 
